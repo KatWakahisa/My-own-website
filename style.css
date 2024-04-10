@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    color: #7a808b;
+}
+
+body{
+    background-color: #03080c;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.logo img{
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+nav{
+    background-color: #1d1f22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    height: 87px;
+    position: relative;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 70px;
+    flex-grow: 1;
+    justify-content: center; 
+    margin-right: 150px;
+}
+
+nav .nav-links a{
+    transition: color 0.3s ease;
+    color: #7a808b;
+    padding: 20px;
+    margin: 0 10px;
+    position: relative;
+}
+
+
+nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+
+nav .nav-links a:hover::after,
+nav .nav-links a.selected::after {
+    width: 100%;
+}
+
+/* En dessous de la nav */
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, #200844, #370B6F, #55116C, #8825B1,#55116C, #370B6F, #200844);
+}
+
+.main img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.recent{
+    padding: 60px 300px;
+}
+
+.recent .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recent .header h4{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.recent .header a{
+    color: #7a808b;
+    font-weight: 500;
+    padding: 10px 30px;
+  
+    border: #22263b;
+    color:#fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+
+.recent .posts {
+    display: flex;
+    gap: 30px;
+    margin-right: auto;
+}
+
+.recent .posts .post-item{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.recent .posts .post-item .theme{
+    background-color: lightblue;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    height: 35px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: auto;
+    position: absolute;
+
+}
+
+.recent .posts .post-item img{
+    max-width: 100%;
+    height: auto;
+}
+
+.recent .posts .post-item button{
+    padding: 10px 30px;
+    background-color: #22263b;
+    border: none;
+    color:#fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    width: auto;
+    margin-top: 15px;
+    margin-right: 0;
+    margin-left: auto;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.recent .posts .post-item button:hover{
+    background: rgb(255, 183, 48);
+    color: #000;
+}
+
+.recent .posts .post-item .post-content{
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+footer{
+    padding: 40px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Other pages */
+
+.page-title{
+    padding: 80px 234px 20px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* blog.html */
+
+.blog-container{
+    display: flex;
+    gap: 30px;
+}
+
+.blog-container .blog-column{
+    flex-direction: column;
+    flex:1;
+}
+
+.blog-container .blog-column .post-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30px;
+}
+
+.blog-column .post-item .theme{
+    background-color: lightblue;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: auto;
+    position: absolute;
+
+}
+
+.blog-container .blog-column .post-item img{
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.blog-container .blog-column .post-item button{
+    padding: 10px 30px;
+    background-color: #22263b;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.blog-container .blog-column .post-item button:hover{
+    background: rgb(255, 183, 48);
+    color: #000;
+}
+
+.blog-container .blog-column .post-item .post-content{
+    max-width: calc(50% - 30px);
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;   
+    margin-top: 15px;
+}
+
+.blog-container .search-column{
+    flex-basis: 500px;
+    margin-left: auto;
+}
+
+/* .blog-container .search-column input{
+
+} */
+
+.blog-container .search-column .archives{
+    margin-top: 30px;
+}
+
+.blog-container .search-column .archives ul,
+.blog-container .search-column .recent-post ul{
+    margin-top: 10px;
+    margin-left: 30px;
+    list-style: none;
+}
+
+.blog-container .search-column .archives ul li,
+.blog-container .search-column .recent-post ul li{
+    padding: 3px;
+}
+
+.blog-container .search-column .archives ul li a,
+.blog-container .search-column .recent-post ul li a{
+    color: #7a808b;
+}
+
+
+/* Changement d'écran */
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px){
+
+}
